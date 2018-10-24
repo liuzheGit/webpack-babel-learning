@@ -1,9 +1,9 @@
-const path = require('path');
-
 module.exports = {
-  entry: './src/index.js',
+  devtool: 'cheap-module-eval-source-map',
+  // devtool: 'eval-source-map',
+  entry: './app/main.js',
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'bundle.js',
+    path: __dirname + '/public'
   }
 }
