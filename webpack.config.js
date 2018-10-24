@@ -11,5 +11,21 @@ module.exports = {
     historyApiFallback: true,
     inline: true,
     port: 7777
+  },
+  module: {
+    rules: [
+      {
+        test: /(\.jsx|\.js)$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              'env', 'react'
+            ]
+          },
+          exclude: /node_modules/
+        }
+      }
+    ]
   }
 }
