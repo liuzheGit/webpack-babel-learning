@@ -15,16 +15,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /(\.jsx|\.js)$/,
+        test: /\.js$/,
         use: {
           loader: 'babel-loader',
           options: {
             presets: [
-              'env', 'react'
+              'env'
             ]
-          },
-          exclude: /node_modules/
-        }
+          }
+        },
+        exclude: /node_modules/
       }
     ]
   }
