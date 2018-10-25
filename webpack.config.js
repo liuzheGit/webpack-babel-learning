@@ -1,3 +1,4 @@
+var path = require('path');
 module.exports = {
   // devtool: 'cheap-module-eval-source-map',
   devtool: 'eval-source-map',
@@ -6,6 +7,7 @@ module.exports = {
     filename: 'bundle.js',
     path: __dirname + '/public'
   },
+  mode:'development',
   devServer: {
     contentBase: './public',
     historyApiFallback: true,
@@ -16,15 +18,13 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              'env'
-            ]
+            presets: ['es2015']
           }
-        },
-        exclude: /node_modules/
+        }
       }
     ]
   }
