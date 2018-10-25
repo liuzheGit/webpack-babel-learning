@@ -18,7 +18,9 @@ h1, h2, h3, h4, h5, h6, p, ul{
   margin: 0;
 }
 #root {
+  margin-top: 100px;
   border-radius: 3px;
   border: 1px solid red;
-  transform: rotate(10deg)
+  transform: rotate(3deg);
+  background: #fdf;
 }

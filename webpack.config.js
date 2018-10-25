@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'eval-source-map',
   entry: './app/main.js',
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle-[hash].js',
     path: __dirname + '/build'
   },
   mode:'development',
