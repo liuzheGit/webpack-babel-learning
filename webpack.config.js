@@ -1,12 +1,13 @@
 var path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   // devtool: 'cheap-module-eval-source-map',
   devtool: 'eval-source-map',
   entry: './app/main.js',
   output: {
     filename: 'bundle.js',
-    path: __dirname + '/public'
+    path: __dirname + '/build'
   },
   mode:'development',
   devServer: {
@@ -41,6 +42,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.BannerPlugin('版权所有, 翻版必究')
+    new webpack.BannerPlugin('版权所有, 翻版必究'),
+    new HtmlWebpackPlugin({
+      template: __dirname + '/app/index.tmpl.html'
+    })
   ]
 }
